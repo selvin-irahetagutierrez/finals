@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;0,800;1,100&display=swap');
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Popping', sans-serif;
+    text-align:center;
+    color:#fff;
+    line-height:1.5;
+    letter-spacing: 1px;
+}
+/* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: white;
+
+  }
+  
+  .logo {
+    cursor: pointer;
+    height: 10%;
+  }
+  
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+    transition: color 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+    color: #0088a9;
+  }
+  
+  .cta {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+  }
+  
+  .cta:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+  }
+  
+  
+  
+  .menu {
+    display: none;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s;
+  }
+  
+  .overlay--active {
+    width: 100%;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: color 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #0088a9;
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+  }
+  /* homepage */
+.img-me{
+    
+    height: 1080px;
+    background-image: url(img/Me.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home{
+  display: flex;
+  background: url("img/Me.jpg") no-repeat center;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width{
+width: 100%;
+display: flex;
+}
+.home .max-width .row{
+margin-right: 100px;
+}
+
+.home .home-content .text-1{
+  font-size: 27px;
+  margin-left: 200px;
+  margin-top: 200px;
+}
+.home .home-content .text-2{
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: 200px;
+}
+.home .home-content .text-3{
+  font-size: 40px;
+  margin: 5px 0;
+}
+.home .home-content a{
+  display: inline-block;
+  background: #0088a9;
+  color: #fff;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid #0088a9;
+  transition: all 0.3s ease;
+  margin-left: 200px;
+}
+.home .home-content a:hover{
+  color: #0088a9;
+  background: none;
+}
+
+/* contact page */
+.contact-section{
+  background-image: url(img/adrien-olichon-RCAhiGJsUUE-unsplash.jpg);
+
+ height: 650px;
+
+}
+
+.contact-section h1{
+  text-align: center;
+  color: #ddd;
+}
+.border{
+  width: 300px;
+  height: 5px;
+  background: white;
+  margin: 40px auto;
+}
+
+.contact-form{
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.contact-form-text{
+  display:block;
+  width: 100%;
+  box-sizing:border-box;
+  margin: 16px;
+  background: #111;
+  padding: 20px 40px;
+  outline:none;
+  color:#ddd;
+  transition: 0.5s
+}
+.contact-form-text:focus{
+  box-shadow: 0 0 10px 4px #34495e;
+
+}
+textarea.contact-form-text{
+  resize: none;
+  height:120px;
+}
+.contact-form-btn{
+  float:right;
+  border:0;
+  background: #34495e;
+  color: #fff;
+  padding:12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s
+}
+.contact-form-btn:hover{
+  background:#2980b9;
+
+}
+
+/* About me Page */
+.wrapper {
+  background-image: url(img/adrien-olichon-RCAhiGJsUUE-unsplash.jpg);
+
+ height:650px;
+}
+.testimonials{
+  font-size:50px;
+  font-weight:800;
+  text-transform:uppercase;
+}
+article h1{
+  font-size:50px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+article h1{
+  content: "";
+  height:5px;
+  width: 225px;
+  background-color:#fff;
+  display:block;
+  margin: auto;
+}
+
+article img{
+  height: 200px;
+  width: 200px;
+  border: 2px solid #fff;
+  border-radius:50%;
+  margin-top:60px;
+}
+blockquote{
+  font-family: sans-serif;
+  font-size:27px;
+  margin-top:30px;
+
+}
+
+/* Services page */
+
+/* projects page */
